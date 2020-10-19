@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Atomus</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DefaultBrowserStandardDetail.xaml.cs" />
+    <Compile Remove="DefaultBrowserStandardMaster.xaml.cs" />
+    <Compile Remove="Views\DefaultBrowserStandardDetail.xaml.cs" />
+    <Compile Remove="Views\DefaultBrowserStandardMaster.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="DefaultBrowserStandardDetail.xaml" />
+    <EmbeddedResource Remove="DefaultBrowserStandardMaster.xaml" />
+    <EmbeddedResource Remove="Views\DefaultBrowserStandardDetail.xaml" />
+    <EmbeddedResource Remove="Views\DefaultBrowserStandardMaster.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Atomus.Core.dotNetStandard" Version="1.0.2.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\DefaultBrowser.xaml.cs">
+      <DependentUpon>DefaultBrowser.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\DefaultBrowser.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Views\DefaultBrowserStandard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>

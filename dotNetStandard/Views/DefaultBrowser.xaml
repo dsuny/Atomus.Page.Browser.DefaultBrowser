@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="Atomus.Page.Browser.DefaultBrowser"
+                  xmlns:masterPages="clr-namespace:Atomus.Page.Menu"
+                  xmlns:detailPages="clr-namespace:Atomus.Page.Home"
+                  >
+    <!--<MasterDetailPage.ToolbarItems>
+        <ToolbarItem Text="H" />
+        <ToolbarItem Text="&lt;" />
+        <ToolbarItem Text="&gt;" />
+        <ToolbarItem Text="X" />
+    </MasterDetailPage.ToolbarItems>-->
+    <MasterDetailPage.Master>
+    <!--<masterPages:DefaultBrowserStandardMaster x:Name="MasterPage" />-->
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail >
+    <NavigationPage>
+      <x:Arguments>
+        <!--<detailPages:DefaultBrowserStandardDetail />-->
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
